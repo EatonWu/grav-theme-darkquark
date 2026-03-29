@@ -1,32 +1,12 @@
 {% extends 'partials/base.html.twig' %}
 {% set yew_base = url('user://assets/yew/dist') %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ yew_base }}/style-e53da940ca9767a9.css" integrity="sha384-3/3+DrUySafLMn4DNXdF2QMRe+tBhjeqWlI1IGbaROM5tIsxkU7dkDw+JDKSQGBD" />
-    <link rel="modulepreload" href="{{ yew_base }}/app-2de396d1d93dcfd0.js" crossorigin="anonymous" integrity="sha384-mFQyDvWkHjyjK3WXA4NXPlS1sXN1eKMayMZHzePWfJeKQJUufQYONEz95MTUgxev" />
-    <link rel="preload" href="{{ yew_base }}/app-2de396d1d93dcfd0_bg.wasm" crossorigin="anonymous" integrity="sha384-ogbm0jvR1Gv4TytCxheDb9lxPBz8Y05O/JPAhphR8ZGv6jYb/EyMd/zuK89rIck1" as="fetch" type="application/wasm" />
-{% endblock %}
-
-{% block javascripts %}
-    {{ parent() }}
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
-{% endblock %}
-
 {% block body %}
     <section id="body-wrapper" class="section">
         <section class="container {{ grid_size }}">
-            <main id="yew"></main>
+            <div class="yew-embed">
+                <iframe title="Yew Demos" src="{{ yew_base }}/index.html" loading="lazy" referrerpolicy="no-referrer"></iframe>
+            </div>
         </section>
     </section>
-
-    <script type="module">
-        import init, * as bindings from '{{ yew_base }}/app-2de396d1d93dcfd0.js';
-        const wasm = await init({ module_or_path: '{{ yew_base }}/app-2de396d1d93dcfd0_bg.wasm' });
-
-        window.wasmBindings = bindings;
-
-        dispatchEvent(new CustomEvent('TrunkApplicationStarted', { detail: { wasm } }));
-    </script>
 {% endblock %}
