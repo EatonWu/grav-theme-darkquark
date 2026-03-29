@@ -3,10 +3,8 @@
 
 {% block body %}
     <section id="body-wrapper" class="section">
-        <section class="container {{ grid_size }}">
-            <div class="yew-embed">
-                <iframe title="Yew Demos" src="{{ yew_base }}/index.html" loading="lazy" referrerpolicy="no-referrer"></iframe>
-            </div>
-        </section>
+        <div class="yew-embed yew-embed-full">
+            <iframe title="Yew Demos" src="{{ yew_base }}/index.html" loading="lazy" referrerpolicy="no-referrer"></iframe>
+        </div>
     </section>
 {% endblock %}
