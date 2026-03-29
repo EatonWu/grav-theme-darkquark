@@ -14,7 +14,10 @@
         <h4>Latest Posts</h4>
         <ul class="related-pages latest-posts">
         {% for p in recent_posts|slice(0, latest_posts_count) %}
-            <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+            <li>
+                <a href="{{ p.url }}">{{ p.title }}</a>
+                <span class="latest-post-date">{{ p.date|date(system.pages.dateformat.short) }}</span>
+            </li>
         {% endfor %}
         </ul>
     </div>

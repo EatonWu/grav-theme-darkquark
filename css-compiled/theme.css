@@ -374,14 +374,16 @@ ul.pagination { -ms-flex-pack: center; justify-content: center; }
 
 #sidebar .sidebar-latest-posts ul.latest-posts { list-style: none; margin-left: 0; margin-bottom: 0; }
 
-#sidebar .sidebar-latest-posts ul.latest-posts li { border-bottom: 1px solid #e7e9ed; }
+#sidebar .sidebar-latest-posts ul.latest-posts li { border-bottom: 1px solid #e7e9ed; padding: 0.45rem 0.2rem; }
 
 #sidebar .sidebar-latest-posts ul.latest-posts li:last-child { border-bottom: 0; }
 
-#sidebar .sidebar-latest-posts ul.latest-posts a { color: #f0f0f0; display: block; padding: 0.45rem 0.2rem; text-decoration: none; }
+#sidebar .sidebar-latest-posts ul.latest-posts a { color: #f0f0f0; display: block; text-decoration: none; }
 
 #sidebar .sidebar-latest-posts ul.latest-posts a:focus,
 #sidebar .sidebar-latest-posts ul.latest-posts a:hover { background: #181a1b; color: #3085ee; }
+
+#sidebar .sidebar-latest-posts ul.latest-posts .latest-post-date { color: #a6acb5; display: block; font-size: 0.7rem; margin-top: 0.15rem; }
 
 #sidebar ul.archives { list-style: none; margin-left: 0; }
 

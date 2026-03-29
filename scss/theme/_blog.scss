@@ -150,6 +150,7 @@ ul.pagination {
 
       li {
         border-bottom: 1px solid $border-color;
+        padding: 0.45rem 0.2rem;
       }
 
       li:last-child {
@@ -159,7 +160,6 @@ ul.pagination {
       a {
         color: $body-font-color;
         display: block;
-        padding: 0.45rem 0.2rem;
         text-decoration: none;
       }
 
@@ -167,6 +167,13 @@ ul.pagination {
       a:hover {
         background: $dark-color;
         color: $primary-color;
+      }
+
+      .latest-post-date {
+        color: $gray-color;
+        display: block;
+        font-size: 0.7rem;
+        margin-top: 0.15rem;
       }
     }
   }
