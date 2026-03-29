@@ -351,6 +351,11 @@ body.sticky-footer #page-wrapper { -ms-flex: 1 0 auto; flex: 1 0 auto; }
 ul.pagination { -ms-flex-pack: center; justify-content: center; }
 
 .prev-next { margin-top: 4rem; }
+.prev-next .btn { background: #1c1e1f; border-color: #3085ee; color: #3085ee; }
+.prev-next .btn:focus,
+.prev-next .btn:hover { background: #181a1b; border-color: #227ded; color: #3085ee; }
+.prev-next .btn:active,
+.prev-next .btn.active { background: #227ded; border-color: #1370e3; color: #fff; }
 
 /** Sidebar specific tweaks **/
 #sidebar ul.related-pages { box-shadow: none; padding: 0; z-index: 1; }
