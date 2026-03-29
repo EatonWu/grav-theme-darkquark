@@ -71,6 +71,7 @@ header-fixed: true            # Cause the header to be fixed at the top of the b
 header-animated: true         # Allows the fixed header to resize to a smaller header when scrolled
 header-dark: false            # Inverts the text/logo to work better on dark backgrounds
 header-transparent: false     # Allows the fixed header to be transparent over the page
+footer-enabled: true          # Shows or hides the footer
 sticky-footer: true           # Causes the footer to be sticky at the bottom of the page
 blog-page: '/blog'            # The route to the blog listing page, useful for a blog style layout with sidebar
 custom_logo:                  # A custom logo rather than the default (see below)  

@@ -1,4 +1,6 @@
-{% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
+{% set body_classes = ['header-fixed', 'header-animated', 'header-dark', 'header-transparent'] %}
+{% if theme_var('sticky-footer') %}{% set body_classes = body_classes|merge(['sticky-footer']) %}{% endif %}
+{% set body_classes = body_class(body_classes) %}
 {% set grid_size = theme_var('grid-size') %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
 {% use 'blocks/base.html.twig' %}
@@ -93,7 +95,9 @@
     </div>
 
     {% block footer %}
-        {% include 'partials/footer.html.twig' %}
+        {% if theme_var('footer-enabled') %}
+            {% include 'partials/footer.html.twig' %}
+        {% endif %}
     {% endblock %}
 
     {% block mobile %}

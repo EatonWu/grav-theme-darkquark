@@ -5,6 +5,7 @@ header-fixed: true
 header-animated: true
 header-dark: false
 header-transparent: false
+footer-enabled: true
 sticky-footer: true
 blog-page: '/blog'
 spectre:
