@@ -1,0 +1,12 @@
+title: Sidebar
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            content:
+              type: markdown
+              label: Content

@@ -1,0 +1,9 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block body %}
+    <section id="body-wrapper" class="section">
+        <section class="container {{ grid_size }}">
+            {{ page.content|raw }}
+        </section>
+    </section>
+{% endblock %}
