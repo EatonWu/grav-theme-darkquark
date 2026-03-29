@@ -10,7 +10,7 @@
     {% set recent_posts = blog.collection() %}
     {% set latest_posts_count = header_var('latest_posts_count', [page, blog])|defined(5) %}
     {% if recent_posts|length > 0 %}
-    <div class="sidebar-content">
+    <div class="sidebar-content sidebar-latest-posts">
         <h4>Latest Posts</h4>
         <ul class="related-pages latest-posts">
         {% for p in recent_posts|slice(0, latest_posts_count) %}
@@ -33,7 +33,12 @@
 </div>
 {% endif %}
 
-{{ page.find('/modules/sidebar').content|raw }}
+{% set sidebar_module = page.find('/modules/sidebar') %}
+{% if sidebar_module and sidebar_module.content %}
+<div class="sidebar-content sidebar-module-content">
+    {{ sidebar_module.content|raw }}
+</div>
+{% endif %}
 
 {% if config.plugins.taxonomylist.enabled %}
 <div class="sidebar-content">

@@ -108,6 +108,16 @@ ul.pagination {
 
 /** Sidebar specific tweaks **/
 #sidebar {
+  .sidebar-content {
+    margin-bottom: 1.5rem;
+  }
+
+  .sidebar-module-content {
+    background: $light-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    padding: 0.75rem;
+  }
 
   ul.related-pages {
     box-shadow: none;
@@ -123,28 +133,41 @@ ul.pagination {
 
   }
 
-  ul.latest-posts {
-    list-style: none;
-    margin-left: 0;
+  .sidebar-latest-posts {
+    background: $light-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    padding: 0.75rem;
 
-    li {
-      border: 1px solid $border-color;
-      border-radius: $border-radius;
-      margin: 0 0 0.6rem;
-      background: $light-color;
+    h4 {
+      margin-top: 0;
     }
 
-    a {
-      color: $body-font-color;
-      display: block;
-      padding: 0.45rem 0.6rem;
-      text-decoration: none;
-    }
+    ul.latest-posts {
+      list-style: none;
+      margin-left: 0;
+      margin-bottom: 0;
 
-    a:focus,
-    a:hover {
-      background: $dark-color;
-      color: $primary-color;
+      li {
+        border-bottom: 1px solid $border-color;
+      }
+
+      li:last-child {
+        border-bottom: 0;
+      }
+
+      a {
+        color: $body-font-color;
+        display: block;
+        padding: 0.45rem 0.2rem;
+        text-decoration: none;
+      }
+
+      a:focus,
+      a:hover {
+        background: $dark-color;
+        color: $primary-color;
+      }
     }
   }
 

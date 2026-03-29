@@ -358,20 +358,30 @@ ul.pagination { -ms-flex-pack: center; justify-content: center; }
 .prev-next .btn.active { background: #227ded; border-color: #1370e3; color: #fff; }
 
 /** Sidebar specific tweaks **/
+#sidebar .sidebar-content { margin-bottom: 1.5rem; }
+
+#sidebar .sidebar-module-content { background: #1c1e1f; border: 1px solid #e7e9ed; border-radius: 0.1rem; padding: 0.75rem; }
+
 #sidebar ul.related-pages { box-shadow: none; padding: 0; z-index: 1; }
 
 #sidebar ul.related-pages li { border-bottom: 1px solid #e7e9ed; }
 
 #sidebar ul.related-pages li:last-child { border-bottom: 0; }
 
-#sidebar ul.latest-posts { list-style: none; margin-left: 0; }
+#sidebar .sidebar-latest-posts { background: #1c1e1f; border: 1px solid #e7e9ed; border-radius: 0.1rem; padding: 0.75rem; }
 
-#sidebar ul.latest-posts li { border: 1px solid #e7e9ed; border-radius: 0.1rem; margin: 0 0 0.6rem; background: #1c1e1f; }
+#sidebar .sidebar-latest-posts h4 { margin-top: 0; }
 
-#sidebar ul.latest-posts a { color: #f0f0f0; display: block; padding: 0.45rem 0.6rem; text-decoration: none; }
+#sidebar .sidebar-latest-posts ul.latest-posts { list-style: none; margin-left: 0; margin-bottom: 0; }
 
-#sidebar ul.latest-posts a:focus,
-#sidebar ul.latest-posts a:hover { background: #181a1b; color: #3085ee; }
+#sidebar .sidebar-latest-posts ul.latest-posts li { border-bottom: 1px solid #e7e9ed; }
+
+#sidebar .sidebar-latest-posts ul.latest-posts li:last-child { border-bottom: 0; }
+
+#sidebar .sidebar-latest-posts ul.latest-posts a { color: #f0f0f0; display: block; padding: 0.45rem 0.2rem; text-decoration: none; }
+
+#sidebar .sidebar-latest-posts ul.latest-posts a:focus,
+#sidebar .sidebar-latest-posts ul.latest-posts a:hover { background: #181a1b; color: #3085ee; }
 
 #sidebar ul.archives { list-style: none; margin-left: 0; }
 
