@@ -41,6 +41,17 @@ form:
       validate:
         type: bool
 
+    header.latest_posts_count:
+      type: number
+      toggleable: true
+      label: Latest Posts Count
+      help: Controls how many items appear in the Latest Posts sidebar list.
+      default: 5
+      validate:
+        min: 1
+        max: 20
+        type: int
+
     header.show_breadcrumbs:
       type: toggle
       toggleable: true

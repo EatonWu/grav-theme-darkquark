@@ -8,11 +8,12 @@
 {% endif %}
 {% if blog is defined %}
     {% set recent_posts = blog.collection() %}
+    {% set latest_posts_count = header_var('latest_posts_count', [page, blog])|defined(5) %}
     {% if recent_posts|length > 0 %}
     <div class="sidebar-content">
         <h4>Latest Posts</h4>
-        <ul class="related-pages">
-        {% for p in recent_posts|slice(0, 5) %}
+        <ul class="related-pages latest-posts">
+        {% for p in recent_posts|slice(0, latest_posts_count) %}
             <li><a href="{{ p.url }}">{{ p.title }}</a></li>
         {% endfor %}
         </ul>
